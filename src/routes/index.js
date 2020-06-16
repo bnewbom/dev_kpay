@@ -4,6 +4,8 @@ import Home from '../views/Home.vue'
 import Manage from '../views/Manage.vue' 
 import Benefit from '../views/Benefit.vue' 
 import Service from '../views/Service.vue' 
+import PayHistory from '../views/PayHistory.vue' 
+
 
 Vue.use(VueRouter);
 
@@ -26,10 +28,13 @@ export const router = new VueRouter({
 			path:'/benefit', 
 			component: Benefit 
         },
-
         {
 			path:'/service', 
 			component: Service 
+        },
+        {
+			path:'/pay_history', 
+			component: PayHistory 
         },
 	]
 })
