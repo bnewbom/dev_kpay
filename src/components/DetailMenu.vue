@@ -1,15 +1,20 @@
 <template>
-  <ul>
-      <li>내역 보기</li>
-      <li>연결계좌 관리</li>
-      <li>예약충전</li>
-      <li>잔액 숨기기</li>
-  </ul>
+  <div>
+    <h2>메뉴</h2>
+    <ul v-for="menu in menuList" :key="menu">
+      <li>{{menu}}</li>
+    </ul>
+  </div>
 </template>
 
 <script>
 export default {
-        name:'DetailMenu'
+  name:'DetailMenu',
+  data: function(){
+    return{
+      menuList:['내역 보기', '연결계좌 관리', '예약충전', '잔액 숨기기']
+    }
+  }
 
 }
 </script>

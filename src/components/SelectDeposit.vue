@@ -1,20 +1,20 @@
 <template>
   <div>
-      <h1>충전</h1>
-      <ul>
-          <li>100만원</li>
-          <li>50만원</li>
-          <li>30만원</li>
-          <li>10만원</li>
-          <li>최대 2,000,000원</li>
-          <li>직접입력</li>
+      <h2>충전</h2>
+      <ul v-for="sum in chargeList" :key="sum">
+          <li>{{sum}}</li>
       </ul>
   </div>
 </template>
 
 <script>
 export default {
-    name:'SelectDeposit'
+    name:'SelectDeposit',
+    data: function(){
+        return{
+        chargeList:['100만원', '50만원', '30만원', '10만원', '최대 2,000,000원', '직접입력']
+        }
+    }
 }
 </script>
 
