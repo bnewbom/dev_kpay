@@ -30,8 +30,11 @@
       <section class="cardReport">
         <h2>카드 리포트</h2>
         <ul>
-          <li>이제부터 신한카드 결제금액은 여기서 챙겨드려요 <span>확인하기</span></li>
-          <li v-for="card in cardList" :key="card">
+          <li>
+            <span>이제부터 신한카드 결제금액은 여기서 챙겨드려요</span> 
+            <a>확인하기</a>
+          </li>
+          <li class="swipe" v-for="card in cardList" :key="card">
             <span>PFM 리포트</span>
             <em>{{card.title}}</em>
             <em>{{card.content}}</em>
@@ -40,9 +43,11 @@
       </section>
 
       <!--지출 분석-->
-      <section>
-        <h2>지출 분석</h2>
-        <a>확인하기</a>
+      <section class="spendReport">
+        <h2>지출 분석
+          <span>월별 지출 흐름을 한 눈에 보여드려요!</span>
+          <a>확인하기</a>
+        </h2>
         <ul>
           <li>카카오페이 결제 <a>0원</a></li>
           <li>카드 <a>조회하기</a></li>
@@ -60,9 +65,12 @@
       </section>
 
       <!--자산 분석-->
-      <section>
-        <h2>자산 분석</h2>
-        <a>연결하기</a>
+      <section class="assetReport">
+        <h2>자산 분석
+          <span>내 자산을 항목별로 분석해드려요!</span>
+          <a>연결하기</a>
+        </h2>
+        
         <ul>
           <li>계좌 <a>0원</a></li>
           <li>투자 <a>조회하기</a></li>

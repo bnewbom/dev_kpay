@@ -42,9 +42,9 @@
         </section>
 
         <!--하단 링크-->
-        <section>
+        <section class="nav">
             <h2>관련 사이트</h2>
-            <ul class="nav">
+            <ul>
                 <li v-for="site in siteLinks" :key="site"><a>{{site}}</a></li>
             </ul>
         </section>
