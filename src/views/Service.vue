@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="service">
       <h1>service</h1>
       <a>등급 영향 없이 무료로 신용조회하세요!
         <span>오늘부터 마음 놓고 내 신용점수를 확인해보세요.</span>

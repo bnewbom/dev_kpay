@@ -1,9 +1,9 @@
 <template>
-    <section>
-        <router-link to="/home">Home</router-link>
-        <router-link to="/manage">Manage</router-link>
-        <router-link to="/benefit">Benefit</router-link>
-        <router-link to="/service">Service</router-link>
+    <section class="naviLink">
+        <router-link to="/home">홈</router-link>
+        <router-link to="/manage">자산관리</router-link>
+        <router-link to="/benefit">혜택</router-link>
+        <router-link to="/service">서비스</router-link>
     </section>
 </template>
 

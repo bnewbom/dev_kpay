@@ -1,9 +1,9 @@
 <template>
-    <div>
+    <div class="benefit">
         <h1>benefit</h1>
 
         <!--summary-->
-        <section>
+        <header>
             <h2>받은 혜택</h2>
             <p>{{thisMonth}}월 받은 혜택</p>
             <span>0원</span>
@@ -12,7 +12,7 @@
                 <li>할인&적립</li>
                 <li>업그레이드</li>
             </ul>
-        </section>
+        </header>
         
         <!--ad banner-->
         <a>컴백! 결제마다 알 드려요!</a>

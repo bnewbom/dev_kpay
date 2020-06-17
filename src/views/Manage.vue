@@ -1,33 +1,33 @@
 <template>
-  <div>
+  <div class="manage">
       <h1>자산관리</h1>
 
       <!--공지사항-->
-      <ul v-for="notice in noticeList" :key="notice">
-        <li>{{notice.title}}</li>
+      <ul class="notice">
+        <li v-for="notice in noticeList" :key="notice">{{notice.title}}</li>
       </ul>
 
       <!--Summary-->
-      <section>
+      <header>
         <h2>나의 순자산</h2>
         <p>계좌 속 숨겨진 돈을 찾아드려요</p> 
-      </section>
+      </header>
 
       <!--최근 이용내역-->
-      <section>
+      <section class="recent">
         <h2>최근 이용내역</h2>
-        <ul v-for="list in recentDetail" :key="list">
-          <li>
+        <ul>
+          <li v-for="list in recentDetail" :key="list">
             <sapn>{{list.title}}</sapn>
             <span>{{list.date}}</span>
-            <strong>{{list.value}}<em>원</em></strong>
-            <em>{{list.type}}</em>
+            <strong>{{list.value}}원 <em>{{list.type}}</em> </strong>
+            
           </li>
         </ul>
       </section>
 
       <!--카드 리포트-->
-      <section>
+      <section class="cardReport">
         <h2>카드 리포트</h2>
         <ul>
           <li>이제부터 신한카드 결제금액은 여기서 챙겨드려요 <span>확인하기</span></li>

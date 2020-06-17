@@ -1,21 +1,25 @@
 <template>
-    <div>
+    <div class='home'>
         <h1>Home</h1>
-        
+
         <!--이용 내역-->
-        <section>
-            <h2>이용 내역</h2>
-            <router-link to="/pay_history" target="_blank">{{deposit}}원</router-link>
-            <a v-on:click="toggleCharge">충전</a>
-            <a>업그레이드</a>
-            <a v-on:click="toggleMenu">메뉴</a>
+        <header>
+            <article>
+                <h2>Pay</h2>
+                <router-link to="/pay_history" target="_blank">{{deposit}}원</router-link>
+                <a v-on:click="toggleCharge">충전</a>
+                <div>
+                    <a>업그레이드</a>
+                    <a v-on:click="toggleMenu">메뉴</a>
+                </div>
+            </article>
             <ul>
                 <li>송금</li>
                 <li>결제</li>
                 <li>투자</li>
                 <li>간편보험</li>
             </ul>
-        </section>
+        </header>
 
         <!--충전-->
         <select-deposit v-if="showChargeList"></select-deposit>
@@ -24,13 +28,15 @@
         <detail-menu v-if="showMenu"></detail-menu>
         
         <!--페-이로운 소식-->
+        <h2 class="newsH2">페-이로운 소식</h2>
         <section>
-            <h2>카카오페이 페이 뉴스</h2>
-            <ul v-for="news in payNewsLists" :key="news">
-                <li>
+            <ul class="payNews">
+                <li v-for="news in payNewsLists" 
+                    :key="news" 
+                    :class="[news.type === 'big'? 'bigArea' : '' ]">
                     <p>{{news.title}}</p>
                     <span>{{news.content}}</span>
-                    <img :src="news.imgUrl">
+                    <img v-if="news.imgUrl!==''" :src="news.imgUrl">
                 </li>
             </ul>
         </section>
@@ -38,8 +44,8 @@
         <!--하단 링크-->
         <section>
             <h2>관련 사이트</h2>
-            <ul v-for="site in siteLinks" :key="site">
-                <li><a>{{site}}</a></li>
+            <ul class="nav">
+                <li v-for="site in siteLinks" :key="site"><a>{{site}}</a></li>
             </ul>
         </section>
 
