@@ -53,10 +53,27 @@ h1{display: none;}
 .manage .cardReport em{display: block; text-align:center; font-size:12px; font-style: normal;}
 .manage .cardReport a{display: block; margin-top:30px; font-size:12px; color:#033fad}
 .manage .cardReport ul::after{content:""; display: block; clear: both;}
-.manage .spendReport h2{height:150px; margin:-15px -15px 0 -15px; padding:15px; background: #5b67c2; color:#fff; border-top-left-radius: 5px; border-top-right-radius: 5px;}
-.manage .spendReport span{display:block; font-size:12px; color:#000; font-weight: normal;}
-.manage .assetReport h2{height:150px; margin:-15px -15px 0 -15px; padding:15px; background: #2c2e2c; color:#fff; border-top-left-radius: 5px; border-top-right-radius: 5px;}
+.manage .spendReport{padding:15px 15px 0 15px; margin-bottom: 0;}
+.manage .spendReport h2{position:relative; height:150px; margin:-15px -15px 0 -15px; padding:15px; background: #5b67c2; color:#fff; border-top-left-radius: 5px; border-top-right-radius: 5px;}
+.manage .spendReport span{display:block; margin:5px 0; font-size:12px; color:#000; font-weight: normal;}
+.manage .spendReport h2 a{position:absolute; bottom:15px; display:block; font-size:10px; color:#eee}
+.manage .spendReport li{position:relative; height:50px; line-height: 50px; font-size:13px}
+.manage .spendReport li a{position: absolute; right:0; font-size:12px; color:#033fad}
+.manage .assetReport{padding:15px 15px 10px 15px; margin-bottom:0}
+.manage .assetReport h2{position:relative; height:150px; margin:-15px -15px 0 -15px; padding:15px; background: #2c2e2c; color:#fff; border-top-left-radius: 5px; border-top-right-radius: 5px;}
 .manage .assetReport span{display:block; font-size:12px; color:#000; font-weight: normal;}
+.manage .assetReport h2 a{position:absolute; bottom:15px; display:block; font-size:10px; color:#eee}
+.manage .assetReport li{position:relative; height:50px; line-height: 50px; font-size:13px}
+.manage .assetReport li a{position: absolute; right:0; font-size:12px; color:#033fad}
+.manage .assetReport .ad{display: block; height:50px; line-height:50px; font-size:15px; background:#fcba03; border-radius: 5px;}
+.manage .creditReport{margin:0 -10px; background: #eee;}
+.manage .creditReport h2{display:none}
+.manage .creditReport li{position:relative; height:50px; line-height: 50px; font-size:13px; background: #fff; border-radius: 5px;}
+.manage .creditReport li:first-child{margin-bottom:10px;}
+.manage .alarm{margin:0 -10px; background: #eee;}
+.manage .alarm h2{display:none}
+.manage .alarm li{position:relative; height:50px; margin-bottom:10px; line-height:50px; font-size:13px; background: #fff; border-radius: 5px;}
+.manage .alarm li:last-child{margin-bottom:0;}
 
 /*BenefitView*/
 .benefit{padding:10px; background:#eee;}

@@ -56,7 +56,7 @@
       </section>
       
       <!--신용 분석-->
-      <section>
+      <section class="creditReport">
         <h2>신용 분석</h2>
         <ul>
           <li>신용점수 <a>조회하기</a></li>
@@ -79,11 +79,11 @@
         </ul>
         
         <!--ad banner-->
-        <a>내 등급으로 가능한 대출은?</a>
+        <a class="ad">내 등급으로 가능한 대출은?</a>
       </section>
 
       <!--알림-->
-      <section>
+      <section class="alarm">
         <h2>알림</h2>
         <ul>
           <li>연결 금융사 <a>연결하기</a></li>
