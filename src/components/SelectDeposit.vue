@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="selectDeposit">
       <h2>충전</h2>
       <ul v-for="sum in chargeList" :key="sum">
           <li>{{sum}}</li>

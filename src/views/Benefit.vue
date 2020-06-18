@@ -8,20 +8,19 @@
             <p>{{thisMonth}}월 받은 혜택</p>
             <span>0원</span>
             <a>쿠폰</a>
-            <ul>
-                <li>할인&적립</li>
-                <li>업그레이드</li>
-            </ul>
         </header>
-        
+        <ul class="headerMenu">
+            <li>할인&적립</li>
+            <li>업그레이드</li>
+        </ul>        
         <!--ad banner-->
-        <a>컴백! 결제마다 알 드려요!</a>
+        <a class="ad">컴백! 결제마다 알 드려요!</a>
 
         <!--메인 혜택 리스트-->
-        <section>
+        <section class="main">
             <h2>메인 혜택 리스트</h2>
-            <ul v-for="list in mainBenefitList" :key="list">
-                <li>
+            <ul>
+                <li v-for="list in mainBenefitList" :key="list">
                     <span>{{list.title}}</span>
                     <span>{{list.content}}</span>
                     <em>{{list.date}}</em>
@@ -30,15 +29,17 @@
         </section>
 
         <!--추천 혜택 더보기-->
-        <section>
+        <section class="recommand">
             <h2>추천 혜택 더보기</h2>
-            <p>봄님을 위한 추천</p>
-            <a>모두 보기</a>
-            <ul v-for="list in recommandList" :key="list">
-                <li>
+            <p>봄님을 위한 추천 
+                <a>모두 보기</a>
+            </p>
+            
+            <ul>
+                <li v-for="list in recommandList" :key="list">
                     <span>{{list.store}}</span>
                     <strong>{{list.title}}</strong>
-                    <spna>{{list.limit}}</spna>
+                    <em>{{list.limit}}</em>
                 </li>
             </ul>
         </section>
@@ -110,7 +111,7 @@ export default {
                     imgUrl:'',
                     store:'에쓰-오일',
                     title:'선착순 2천원 할인',
-                    limit:'5만워누 이상 결제 시'
+                    limit:'5만원 이상 결제 시'
                 },
             ],
         }

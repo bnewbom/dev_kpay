@@ -6,11 +6,14 @@
         <header>
             <article>
                 <h2>Pay</h2>
-                <router-link to="/pay_history" target="_blank">{{deposit}}원</router-link>
-                <a v-on:click="toggleCharge">충전</a>
-                <div>
-                    <a>업그레이드</a>
-                    <a v-on:click="toggleMenu">메뉴</a>
+                <router-link to="/pay_history" target="_blank" class="deposit">{{deposit}}원</router-link>
+                <a class="charge" v-on:click="toggleCharge">충전</a>
+                <div class="menu">
+                    <a class="upgrade">
+                        <span>업그레이드</span>
+                        계좌로 연 0.6% 혜택받기
+                    </a>
+                    <em v-on:click="toggleMenu">메뉴</em>
                 </div>
             </article>
             <ul>

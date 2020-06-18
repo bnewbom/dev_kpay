@@ -1,13 +1,13 @@
 <template>
   <div class="service">
       <h1>service</h1>
-      <a>등급 영향 없이 무료로 신용조회하세요!
+      <a class="ad">등급 영향 없이 무료로 신용조회하세요!
         <span>오늘부터 마음 놓고 내 신용점수를 확인해보세요.</span>
       </a>
 
-      <section>
+      <section class="setting">
         <h2>설정</h2>
-        <p>비밀번호 결제수단 고객센터</p>
+        <span>비밀번호 결제수단 고객센터</span>
       </section>
 
       <section>

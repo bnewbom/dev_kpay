@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="detailMenu">
     <h2>메뉴</h2>
     <ul v-for="menu in menuList" :key="menu">
       <li>{{menu}}</li>
