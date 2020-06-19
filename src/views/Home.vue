@@ -61,6 +61,7 @@
 <script>
 import SelectDeposit from '../components/SelectDeposit' 
 import DetailMenu from '../components/DetailMenu' 
+import { fetchNewsList } from '../api/index.js'
 
 export default {
     name: 'HomeView',
@@ -121,10 +122,15 @@ export default {
         toggleCharge: function(){
             this.showChargeList = true;
         }
-    }
+    },
+    created(){
+        fetchNewsList()
+            .then(response => console.log(response)) 
+            .catch(error => console.log(error)); 
 
+    }
 }
-</script>
+</script>)
 
 <style>
 
