@@ -25,13 +25,20 @@
     methods: {
       fillData () {
         this.datacollection = {
-          labels: [this.getRandomInt(), this.getRandomInt(), this.getRandomInt(), this.getRandomInt(),],
+          labels: [10,20,25,15,17,18],
           datasets: [
             {
+              type:'bar',
               label: 'Data One',
               //backgroundColor: '#f87979',
-              data: [this.getRandomInt(), this.getRandomInt(), this.getRandomInt(), this.getRandomInt(),]
-            }
+              data: [10,20,25,15,17,18]
+            },
+            {
+              type:'line',
+              label: 'Data One',
+              //backgroundColor: '#f87979',
+              data: [10,20,25,15,17,18]
+            },
           ]
         }
       },
@@ -45,7 +52,5 @@
 <style>
   .small {
     max-width: 600px;
-    height:200px;
-    margin:  150px auto;
   }
 </style>

@@ -44,6 +44,5 @@
 <style>
   .small {
     max-width: 600px;
-    margin:  150px auto;
   }
 </style>
