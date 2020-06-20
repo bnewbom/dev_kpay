@@ -1,17 +1,20 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
+import getters from './getters.js';
+import mutations from './mutations.js';
+import actions from './actions.js';
 
 Vue.use(Vuex);
 
 export default new Vuex.Store({
     strict: process.env.NODE_ENV !== 'production',
     state: {
-        account:'0',
-        newsList:[],
-        benefitList:[],
-        historyLisrt:[],
+        account:null,
+        payNews:[],
+        benefits:[],
+        history:[],
     },
-    // getters,
-    // mutations,
-    // actions,
-  })
+    getters,
+    mutations,
+    actions,
+})

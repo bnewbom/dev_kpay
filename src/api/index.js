@@ -1,23 +1,23 @@
 import axios from 'axios'
 
 const config = {
-    baseUrl: 'http://localhost:1337/'
+    baseUrl: 'http://springnet.synology.me:55241/'
 }
 
-function fetchNewsList(){
+function fetchPayNews(){
     return axios.get(`${config.baseUrl}paynews`);
 }
 
-function fetchBenefitList(){
-    return axios.get(`${config.baseUrl}benefit`);
+function fetchBenefits(){
+    return axios.get(`${config.baseUrl}bnenfits`);
 }
 
 function fetchHistory(){
-    return axios.get(`${config.baseUrl}history`);
+    return axios.get(`${config.baseUrl}histories`);
 }
 
 function fetchAccount(){
-    return axios.get(`${config.baseUrl}account`);
+    return axios.get(`${config.baseUrl}accounts`);
 }
 
-export { fetchNewsList, fetchBenefitList, fetchHistory, fetchAccount }
+export { fetchPayNews, fetchBenefits, fetchHistory, fetchAccount }

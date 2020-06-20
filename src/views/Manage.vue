@@ -17,11 +17,14 @@
       <section class="recent">
         <h2>최근 이용내역</h2>
         <ul>
-          <li v-for="list in recentDetail" :key="list">
+          <li v-for="list in getHistory" :key="list">
+            <span>{{list.bank}}</span>
             <sapn>{{list.title}}</sapn>
             <span>{{list.date}}</span>
-            <strong>{{list.value}}원 <em>{{list.type}}</em> </strong>
-            
+            <strong>{{list.price}}원 
+              <em v-if="list.type">수입</em>
+              <em v-else>지출</em>
+            </strong>
           </li>
         </ul>
       </section>
@@ -95,6 +98,7 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 export default {
     name: 'ManageView',
     data: function(){
@@ -116,22 +120,6 @@ export default {
             url:'',
           }
         ],
-        recentDetail:[
-          {
-            title:'카카오입출금(카카오뱅크1234)',
-            date:'6/11(목) 08:58',
-            value:'100,000',
-            type:'송금',
-            thumUrl:'',
-          },
-          {
-            title:'김모모',
-            date:'6/11(목) 08:30',
-            value:'+100,000',
-            type:'받기',
-            thumUrl:'',
-          }
-        ],
         cardList:[
           {
             title:'송금 절친',
@@ -150,8 +138,15 @@ export default {
           }
         ]
       }
+    },
+    computed:{
+      ...mapGetters([
+        'getHistory'
+      ]),
+    },
+    created(){
+      this.$store.dispatch('FETCH_HISTORY');
     }
-
 }
 </script>
 

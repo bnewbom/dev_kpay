@@ -1,12 +1,11 @@
 <template>
     <div class='home'>
         <h1>Home</h1>
-
         <!--이용 내역-->
         <header>
             <article>
                 <h2>Pay</h2>
-                <router-link to="/pay_history" target="_blank" class="deposit">{{deposit}}원</router-link>
+                <router-link to="/pay_history" target="_blank" class="deposit">{{getAccount[0].balance}}원</router-link>
                 <a class="charge" v-on:click="toggleCharge">충전</a>
                 <div class="menu">
                     <a class="upgrade">
@@ -34,12 +33,12 @@
         <h2 class="newsH2">페-이로운 소식</h2>
         <section>
             <ul class="payNews">
-                <li v-for="news in payNewsLists" 
+                <li v-for="news in getPayNews" 
                     :key="news" 
-                    :class="[news.type === 'big'? 'bigArea' : '' ]">
+                    :class="[news.type? 'bigArea' : '' ]">
                     <p>{{news.title}}</p>
-                    <span>{{news.content}}</span>
-                    <img v-if="news.imgUrl!==''" :src="news.imgUrl">
+                    <span>{{news.subtitle}}</span>
+                    <img v-if="news.img!==''" :src="news.img">
                 </li>
             </ul>
         </section>
@@ -61,7 +60,7 @@
 <script>
 import SelectDeposit from '../components/SelectDeposit' 
 import DetailMenu from '../components/DetailMenu' 
-import { fetchNewsList } from '../api/index.js'
+import { mapGetters } from 'vuex';
 
 export default {
     name: 'HomeView',
@@ -69,48 +68,16 @@ export default {
         SelectDeposit,
         DetailMenu,
     },
+    computed:{
+        ...mapGetters([
+            'getPayNews',
+            'getAccount',
+        ]),
+    },
     data: function (){
         return {
-            deposit: 0,
             showMenu: false,
             showChargeList: false,
-            payNewsLists:[
-                {
-                    title:'업계 최초 인증으로 안전, 안심을 말해요',
-                    content:'금융보안원 ISMS-P 인증 획득',
-                    type:'big',
-                    imgUrl:'',
-                    background:'',
-                },
-                {
-                    title:'통신요금 납부도 카카오페이로 하세요',
-                    content:'매월 청구서에서 챙겨드려요',
-                    type:'default',
-                    imgUrl:'https://image.flaticon.com/icons/svg/1271/1271847.svg',
-                    background:'',
-                },
-                {
-                    title:'공인인증서 대신 카카오페이 인증으로!',
-                    content:'간편하게 인증서 발급해보세요',
-                    type:'default',
-                    imgUrl:'',
-                    background:'',
-                },
-                {
-                    title:'내 보험 몇개나 있지?',
-                    content:'한눈에 확인하고 진단까지',
-                    type:'default',
-                    imgUrl:'',
-                    background:'',
-                },
-                {
-                    title:'예탁금 예금자보호 안전한 금융생활',
-                    content:'계좌 업그레이드 시 한정 혜택',
-                    type:'big',
-                    imgUrl:'',
-                    background:'',
-                },
-            ],
             siteLinks:['고객센터', '신고하기', '홈페이지', '페이스북'],
             footerAddress:'경기 성남시 분당구 판교역로 152 알파돔타워 12층 (우)13529'
         }
@@ -124,10 +91,8 @@ export default {
         }
     },
     created(){
-        fetchNewsList()
-            .then(response => console.log(response)) 
-            .catch(error => console.log(error)); 
-
+        this.$store.dispatch('FETCH_PAYNEWS');
+        this.$store.dispatch('FETCH_ACCOUNT');
     }
 }
 </script>)
