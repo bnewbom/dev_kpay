@@ -1,7 +1,9 @@
 <template>
   <div class="small">
-    <doughnut-chart :chart-data="datacollection" :options="chartOptions"></doughnut-chart>
-    <button @click="fillData()">Randomize</button>
+    <doughnut-chart 
+      :chart-data="datacollection" 
+      :height="180"
+      :options="chartOptions"></doughnut-chart>
   </div>
 </template>
 

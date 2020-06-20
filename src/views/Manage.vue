@@ -1,8 +1,6 @@
 <template>
   <div class="manage">
       <h1>자산관리</h1>
-      <spend-report></spend-report>
-      <asset-report></asset-report>
       <!--공지사항-->
       <ul class="notice">
         <li v-for="notice in noticeList" :key="notice">{{notice.title}}</li>
@@ -48,9 +46,11 @@
 
       <!--지출 분석-->
       <section class="spendReport">
-        <h2>지출 분석
-          <span>월별 지출 흐름을 한 눈에 보여드려요!</span>
-          <a>확인하기</a>
+        <h2>
+          <p>지출 분석</p>
+          <spend-report></spend-report>
+          <!-- <span>월별 지출 흐름을 한 눈에 보여드려요!</span>
+          <a>확인하기</a> -->
         </h2>
         <ul>
           <li>카카오페이 결제 <a>0원</a></li>
@@ -70,9 +70,11 @@
 
       <!--자산 분석-->
       <section class="assetReport">
-        <h2>자산 분석
-          <span>내 자산을 항목별로 분석해드려요!</span>
-          <a>연결하기</a>
+        <h2>
+          <p>자산 분석</p>
+          <asset-report></asset-report>
+          <!-- <span>내 자산을 항목별로 분석해드려요!</span>
+          <a>연결하기</a> -->
         </h2>
         
         <ul>
