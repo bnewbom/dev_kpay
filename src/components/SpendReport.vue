@@ -95,7 +95,6 @@
               borderColor:'#fff',
               backgroundColor:'transparent',
               lineTension:0,
-              //backgroundColor: '#f87979',
               data: [100350,201820,250000,150000,170000,185000]
             },
             {
@@ -109,9 +108,6 @@
           ],
         }
       },
-      getRandomInt () {
-        return Math.floor(Math.random() * (50 - 5 + 1)) + 5
-      }
     }
   }
 </script>

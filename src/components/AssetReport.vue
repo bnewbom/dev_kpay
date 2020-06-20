@@ -3,15 +3,38 @@
     <doughnut-chart 
       :chart-data="datacollection" 
       :height="180"
-      :options="chartOptions"></doughnut-chart>
+      :options="$options.options"></doughnut-chart>
   </div>
 </template>
 
 <script>
   import doughnutChart from '../plugins/doughnutChart'
+const options = {
+    layout: {
+        padding: {
+            left: 0,
+            right: 0,
+            top: 0,
+            bottom: 10
+        }
+    },
+    tooltips:{ 
+      yAlign: 'bottom',
+      displayColors: false,
+    }, 
+    legend: { /*상단 라벨*/
+      position: 'right',
+      labels: {
+					fontColor: "#7b8494",
+          fontSize:10,
+          boxWidth:10,
 
+				}
+    },
+  }
   export default {
     name:'AssetReport',
+    options,
     components: {
       doughnutChart
     },
@@ -26,19 +49,17 @@
     methods: {
       fillData () {
         this.datacollection = {
-          labels: [this.getRandomInt(), this.getRandomInt()],
+          labels: ['계좌', '투자', '내차', '대출'],
           datasets: [
             {
-              label: 'Data One',
-              //backgroundColor: '#f87979',
-              data: [this.getRandomInt(), this.getRandomInt()]
+              borderWidth:0,
+              //label: 'Data One',
+              backgroundColor: ['#32a852', '#ffd426', '#eb5079', '#276bd9'],
+              data: [50,30,10,40]
             },
           ]
         }
       },
-      getRandomInt () {
-        return Math.floor(Math.random() * (50 - 5 + 1)) + 5
-      }
     }
   }
 </script>
