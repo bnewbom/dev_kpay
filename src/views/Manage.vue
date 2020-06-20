@@ -1,7 +1,8 @@
 <template>
   <div class="manage">
       <h1>자산관리</h1>
-
+      <spend-report></spend-report>
+      <asset-report></asset-report>
       <!--공지사항-->
       <ul class="notice">
         <li v-for="notice in noticeList" :key="notice">{{notice.title}}</li>
@@ -99,8 +100,15 @@
 
 <script>
 import { mapGetters } from 'vuex'
+import SpendReport from '../components/SpendReport'
+import AssetReport from '../components/AssetReport'
+
 export default {
     name: 'ManageView',
+    components:{
+      SpendReport,
+      AssetReport,
+    },
     data: function(){
       return{
         noticeList:[
