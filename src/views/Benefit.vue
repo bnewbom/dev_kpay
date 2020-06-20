@@ -1,6 +1,7 @@
 <template>
     <div class="benefit">
         <h1>benefit</h1>
+        <swiper-list></swiper-list>
         <!--summary-->
         <header>
             <h2>받은 혜택</h2>
@@ -47,8 +48,12 @@
 
 <script>
 import { mapGetters } from 'vuex'
+import SwiperList from '../components/SwiperList' 
 export default {
     name: 'BenefitView',
+    components:{
+        SwiperList,
+    },
     data: function(){
         return{
             thisMonth: '6',
