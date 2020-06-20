@@ -1,7 +1,6 @@
 <template>
     <div class="benefit">
         <h1>benefit</h1>
-        <swiper-list></swiper-list>
         <!--summary-->
         <header>
             <h2>받은 혜택</h2>
@@ -19,6 +18,7 @@
         <!--메인 혜택 리스트-->
         <section class="main">
             <h2>메인 혜택 리스트</h2>
+            <swiper-list></swiper-list>
             <ul>
                 <li v-for="list in mainBenefitList" :key="list">
                     <span>{{list.title}}</span>

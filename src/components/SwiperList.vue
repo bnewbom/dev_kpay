@@ -1,47 +1,40 @@
 <!-- The ref attr used to find the swiper instance -->
 <template>
-  <swiper :options="swiperOption" ref="mySwiper" @someSwiperEvent="callback">
+  <swiper class="newSwipe" :options="swiperOption" ref="mySwiper" @someSwiperEvent="callback">
     <!-- slides -->
-    <swiper-slide>I'm Slide 1</swiper-slide>
-    <swiper-slide>I'm Slide 2</swiper-slide>
-    <swiper-slide>I'm Slide 3</swiper-slide>
-    <swiper-slide>I'm Slide 4</swiper-slide>
-    <swiper-slide>I'm Slide 5</swiper-slide>
-    <swiper-slide>I'm Slide 6</swiper-slide>
-    <swiper-slide>I'm Slide 7</swiper-slide>
-    <!-- Optional controls -->
-    <div class="swiper-pagination"  slot="pagination"></div>
-    <div class="swiper-button-prev" slot="button-prev"></div>
-    <div class="swiper-button-next" slot="button-next"></div>
-    <div class="swiper-scrollbar"   slot="scrollbar"></div>
+    <swiper-slide v-for="list in getBenefits" :key="list">
+        <img :src="list.img">
+    </swiper-slide>
   </swiper>
 </template>
 
 <script>
-  export default {
+import { mapGetters } from 'vuex'
+
+export default {
     name: 'SwiperList',
     data() {
-      return {
-        swiperOption: {
-          slidesPerView: 3,
-          spaceBetween: 30,
-          freeMode: true,
-          pagination: {
-            el: '.swiper-pagination',
-            clickable: true
-          }
+        return {
+                swiperOption: {
+                slidesPerView:4,
+                spaceBetween: 10,
+                freeMode: true,
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true
+                }
+            }
         }
-      }
     },
     computed: {
-      swiper() {
-        return this.$refs.mySwiper.swiper
-      }
+        ...mapGetters(['getBenefits']),
+        swiper() {
+            return this.$refs.mySwiper.swiper
+            }
     },
     mounted() {
-      // 현재 swiper 인스턴스를 확인
-      console.log('this is current swiper instance object', this.swiper)
-      this.swiper.slideTo(3, 1000, false)
+        this.swiper.slideTo(3, 1000, false)
+        this.$store.dispatch('FETCH_BENEFITS');
     }
-  }
+}
 </script>
