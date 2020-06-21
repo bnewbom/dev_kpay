@@ -5,7 +5,7 @@
         <header>
             <article>
                 <h2>Pay</h2>
-                <router-link to="/pay_history" target="_blank" class="deposit">{{getAccount[0].balance}}원</router-link>
+                <p class="deposit">{{getAccount[0].balance}}원</p>
                 <BottomSheet></BottomSheet>
                 <div class="menu">
                     <a class="upgrade">
@@ -15,15 +15,17 @@
                 </div>
             </article>
             <ul>
-                <li>
+                <li @click="showModal=true">
                     <img src="https://img.icons8.com/pastel-glyph/2x/currency-exchange.png">송금</li>
-                <li>
+                <li @click="showModal=true">
                     <img src="https://img.icons8.com/pastel-glyph/2x/heck-for-payment--v2.png">결제</li>
-                <li>
+                <li @click="showModal=true">
                     <img src="https://img.icons8.com/pastel-glyph/2x/combo-chart.png">투자</li>
-                <li>
+                <li @click="showModal=true">
                     <img src="https://img.icons8.com/pastel-glyph/2x/umbrella.png">간편보험</li>
             </ul>
+            <ModalComponent
+                v-if="this.showModal" @close="showModal=false"></ModalComponent>
         </header>
 
         <!--충전-->
@@ -65,6 +67,7 @@
 
 <script>
 import BottomSheet from '../components/BottomSheet' 
+import ModalComponent from '../components/ModalComponent' 
 
 import { mapGetters } from 'vuex';
 
@@ -72,6 +75,7 @@ export default {
     name: 'HomeView',
     components: {
         BottomSheet,
+        ModalComponent
     },
     computed:{
         ...mapGetters([
@@ -81,6 +85,7 @@ export default {
     },
     data: function (){
         return {
+            showModal: false,
             showMenu: false,
             showChargeList: false,
             siteLinks:['고객센터', '신고하기', '홈페이지', '페이스북'],

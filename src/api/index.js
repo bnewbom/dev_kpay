@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const config = {
-    baseUrl: 'http://springnet.synology.me:55241/'
+    baseUrl: 'http://springnet.synology.me:9999/'
 }
 
 function fetchPayNews(){

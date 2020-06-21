@@ -35,7 +35,7 @@ h1{display: none;}
 .home header li img{display:block; width:25px; margin:10px auto 5px}
 .home section{border-radius: 5px; background: #fff; margin-bottom:10px}
 .home .payNews {background:#eee;}
-.home .payNews li{position:relative; height:100px; padding:15px; margin-bottom:10px; background:#fff; border-radius: 5px;}
+.home .payNews li{position:relative; padding:15px; margin-bottom:10px; background:#fff; border-radius: 5px;}
 .home .payNews a{display:block; width: 100%; height:100%}
 .home .payNews p{width:55%; margin-bottom:5px; font-weight:bold;}
 .home .payNews span{width:57%; font-size:12px; color:#ababab}
@@ -112,12 +112,12 @@ h1{display: none;}
 .benefit .recommand p a{float:right; color:#033fad}
 .benefit .recommand li{position:relative; margin-bottom:10px; padding:15px 15px; font-size:13px; background: #fff; border-radius: 5px; overflow: hidden;}
 .benefit .recommand li:last-child{margin-bottom:0;}
-.benefit .recommand li img{float: left; width: 50px; height: 50px; margin-right: 10px; border-radius: 5px;}
+.benefit .recommand li img{float: left; width: 50px; height: 50px; margin-right: 10px; border-radius: 5px; object-fit:cover;}
 .benefit .recommand li span{display: block;}
 .benefit .recommand li em{display: block; font-style: normal; font-size:11px;}
 .benefit .main {position:relative; padding:15px; margin-bottom:20px; background:#f57d05;}
 .benefit .main h2{display: none;}
-.benefit .main ul{height:70px; padding-top:35px; overflow: hidden;}
+.benefit .main ul{height:35px; padding-top:35px; overflow: hidden;}
 .benefit .main li{position:relative;}
 .benefit .main li span{display: block; font-size:14px}
 .benefit .main li em{position:absolute; top:0; right:0; font-size: 13px; color:#eee; font-style: normal;}
@@ -144,7 +144,7 @@ h1{display: none;}
 
 /*BottomSheet*/
 .home .text-center {display:inline-block; position: absolute; right:15px; top:15px}
-.home .v-btn:not(.v-btn--round).v-size--default {height:25px; min-width: 30px; padding:5px; font-size: 11px;}
+.home .v-btn:not(.v-btn--round).v-size--default {height:15px; min-width: 30px; padding:5px; font-size: 11px;}
 .home .v-dialog__container{display:block;}
 .home .v-dialog__content{height:100vh}
 .home .v-sheet.v-list{padding-bottom: 0;}

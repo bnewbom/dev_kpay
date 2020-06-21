@@ -9,6 +9,11 @@ import ViewContainer from './views/ViewContainer'
 
 export default {
   name: 'App',
+  data: function(){
+    return{
+      
+    }
+  },
   components: {
     ViewContainer,
   }
