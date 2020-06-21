@@ -39,7 +39,7 @@ h1{display: none;}
 .home .payNews a{display:block; width: 100%; height:100%}
 .home .payNews p{width:55%; margin-bottom:5px; font-weight:bold;}
 .home .payNews span{width:57%; font-size:12px; color:#ababab}
-.home .payNews img{position: absolute; top:10px; right:10px; display:block; width:80px; height:80px; object-fit: cover; border-radius: 5px;}
+.home .payNews img{position: absolute; top:15px; right:15px; display:block; width:78px; height:78px; object-fit: cover; border-radius: 5px;}
 .home .payNews .bigArea{height:200px; background-size: cover;}
 .home .payNews .bigArea span{color:#000}
 .home .nav{background: #eee; text-align: center;}
@@ -100,8 +100,10 @@ h1{display: none;}
 
 /*BenefitView*/
 .benefit{padding:10px; background:#eee;}
-.benefit header{height:80px; margin:-10px; background: #fff;}
+.benefit header{height:80px; margin:-10px; padding:10px 15px; background: #fff;}
 .benefit header h2{display: none;}
+.benefit header p{font-size:12px; margin-bottom:5px;}
+.benefit header span {font-weight: bold;}
 .benefit .headerMenu{position: relative; top:-20px; background:#fff; border-radius:20px; border:1px solid #ffb300}
 .benefit .headerMenu li{display:inline-block; width:50%; line-height:50px; text-align: center; font-size:12px}
 .benefit .ad {position:relative; top:-10px; display:block; padding:15px 15px; font-size:13px; background: #fff; border-radius: 5px; overflow: hidden;}
@@ -138,9 +140,9 @@ h1{display: none;}
 .naviLink a{display: inline-block; padding-right:10px; font-size:14px; font-weight: bold;}
 
 /*SwiperList*/
-.main .swiper-container{margin: 0px -25px;}
-.main .swiper-slide{background: #fff; padding:10px 0; border-radius:25px; text-align: center; overflow: hidden;}
-.main .swiper-slide img{display:inline-block; width:55px; height:55px; border-radius: 15px; object-fit: cover;}
+.main .swipeIcon{margin: 0px -25px; height:90px;  position: relative;}
+.main .swipeIcon .swiper-slide{background: #fff; padding:10px 0; border-radius:25px; text-align: center; overflow: hidden;}
+.main .swipeIcon .swiper-slide img{display:inline-block; width:55px; height:55px; border-radius: 15px; object-fit: cover;}
 
 /*BottomSheet*/
 .home .text-center {display:inline-block; position: absolute; right:15px; top:15px}

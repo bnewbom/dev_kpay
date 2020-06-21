@@ -6,7 +6,6 @@
             <h2>받은 혜택</h2>
             <p>{{thisMonth}}월 받은 혜택</p>
             <span>0원</span>
-            <a>쿠폰</a>
         </header>
         <ul class="headerMenu">
             <li>할인&적립</li>
