@@ -1,10 +1,10 @@
 /* Reset */
-html, body, h1, h2, h3, h4, h5, h6, p, form, fieldset, img, select {margin:0; padding:0; border:0;}
+html, body, h1, h2, h3, h4, h5, h6, p, form, fieldset, img, select {margin:0; padding:0; border:0; font-family: sans-serif;}
 ul, dl,dt,dd {margin:0; padding:0;list-style:none;}
 label, input, button, select, img {vertical-align:middle;}
 fieldset legend, hr {display:none;}
 a{color: #000; text-decoration: none;}
-a:hover, a:focus, a:active {color: crimson; text-decoration: none; }
+a:hover, a:focus, a:active {text-decoration: none; }
 
 /*transition*/
 .fade-enter-active, .fade-leave-active {
@@ -27,14 +27,16 @@ h1{display: none;}
 .home header .deposit{color:#fff}
 .home header article{position:relative; padding:15px; margin:0 10px; background: #2c2e2c; border-radius: 5px;}
 .home header .charge{position:absolute; right:15px; top:15px; display: inline-block; width: 30px; line-height: 25px; background: #eee; text-align: center; border-radius: 5px; font-size:12px;}
-.home header .menu{position:relative; margin:20px -15px -15px; padding:10px; background:#363432; border-top:1px solid #000; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;} 
+.home header .menu{position:relative; margin:20px -15px -15px; padding:10px; background:#363432; border-top:1px solid #292828; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;} 
 .home header .menu em{font-size:10px; font-style: normal; float:right;}
-.home header .upgrade{color:#e6a400; font-size: 12px;}
-.home header .upgrade span{display:inline-block; padding:5px; font-size:10px; color:#000; border-radius: 5px; background-color:#e6a400;}
-.home header li{display: inline-block; width:25%; line-height:50px; text-align: center; font-size:13px}
+.home header .upgrade{color:#ffd21f; font-size: 12px; vertical-align: middle;}
+.home header .upgrade span{display:inline-block; padding:5px; font-size:10px; color:#000; border-radius:10px; background-color:#ffd21f;}
+.home header li{display: inline-block; width:25%; margin-bottom:10px; text-align: center; font-size:13px}
+.home header li img{display:block; width:25px; margin:10px auto 5px}
 .home section{border-radius: 5px; background: #fff; margin-bottom:10px}
 .home .payNews {background:#eee;}
 .home .payNews li{position:relative; height:100px; padding:15px; margin-bottom:10px; background:#fff; border-radius: 5px;}
+.home .payNews a{display:block; width: 100%; height:100%}
 .home .payNews p{width:55%; margin-bottom:5px; font-weight:bold;}
 .home .payNews span{width:57%; font-size:12px; color:#ababab}
 .home .payNews img{position: absolute; top:10px; right:10px; display:block; width:80px; height:80px; object-fit: cover; border-radius: 5px;}
@@ -130,7 +132,7 @@ h1{display: none;}
 
 /*NaviLinks*/
 .naviLink{padding:10px 0; margin:0 10px;}
-.naviLink a{display: inline-block; padding-right:10px; font-size:13px}
+.naviLink a{display: inline-block; padding-right:10px; font-size:14px; font-weight: bold;}
 
 /*SwiperList*/
 .main .swiper-container{margin: 0px -25px;}
@@ -139,7 +141,7 @@ h1{display: none;}
 
 /*BottomSheet*/
 .home .text-center {display:inline-block; position: absolute; right:15px; top:15px}
-.home .v-btn:not(.v-btn--round).v-size--default {height:20px; min-width: 30px; padding: 3px; font-size: 11px;}
+.home .v-btn:not(.v-btn--round).v-size--default {height:25px; min-width: 30px; padding:5px; font-size: 11px;}
 .home .v-dialog__container{display:block;}
 .home .v-sheet.v-list{padding-bottom: 0;}
 .home .v-list-item--link{height:35px}

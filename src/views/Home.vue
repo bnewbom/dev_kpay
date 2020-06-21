@@ -15,10 +15,14 @@
                 </div>
             </article>
             <ul>
-                <li>송금</li>
-                <li>결제</li>
-                <li>투자</li>
-                <li>간편보험</li>
+                <li>
+                    <img src="https://img.icons8.com/pastel-glyph/2x/currency-exchange.png">송금</li>
+                <li>
+                    <img src="https://img.icons8.com/pastel-glyph/2x/heck-for-payment--v2.png">결제</li>
+                <li>
+                    <img src="https://img.icons8.com/pastel-glyph/2x/combo-chart.png">투자</li>
+                <li>
+                    <img src="https://img.icons8.com/pastel-glyph/2x/umbrella.png">간편보험</li>
             </ul>
         </header>
 
@@ -36,9 +40,11 @@
                     :key="news" 
                     :class="[news.type? 'bigArea' : '' ]"
                     :style="[news.type]? { backgroundImage: 'url(' + news.background + ')' } :''">
-                    <p>{{news.title}}</p>
-                    <span>{{news.subtitle}}</span>
-                    <img v-if="news.img" :src="news.img">
+                    <a :href="news.url">
+                        <p>{{news.title}}</p>
+                        <span>{{news.subtitle}}</span>
+                        <img v-if="news.img" :src="news.img">
+                    </a>
                 </li>
             </ul>
         </section>

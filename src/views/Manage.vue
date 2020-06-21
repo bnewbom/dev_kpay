@@ -2,10 +2,7 @@
   <div class="manage">
       <h1>자산관리</h1>
       <!--공지사항-->
-      <ul class="notice">
-        <li v-for="notice in noticeList" :key="notice">{{notice.title}}</li>
-      </ul>
-
+      <RollingText></RollingText>
       <!--Summary-->
       <header>
         <h2>나의 순자산</h2>
@@ -102,34 +99,20 @@
 
 <script>
 import { mapGetters } from 'vuex'
+import RollingText from '../components/RollingText'
 import SpendReport from '../components/SpendReport'
 import AssetReport from '../components/AssetReport'
 
 export default {
     name: 'ManageView',
     components:{
+      RollingText,
       SpendReport,
       AssetReport,
     },
     data: function(){
       return{
-        noticeList:[
-          {
-            title:'공인인증서 없이 카카오뱅크로 간편조회!',
-            background:'',
-            url:'',
-          },
-          {
-            title:'[카카오페이증권] 결제 알 모으면 리워드 2배!',
-            background:'',
-            url:'',
-          },
-          {
-            title:'총 1천만원의 미션에 도전하라!',
-            background:'',
-            url:'',
-          }
-        ],
+        
         cardList:[
           {
             title:'송금 절친',
