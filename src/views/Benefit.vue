@@ -37,6 +37,7 @@
             
             <ul>
                 <li v-for="list in recommandList" :key="list">
+                    <img v-if="list.img" :src="list.img">
                     <span>{{list.title}}</span>
                     <strong>{{list.subtitle}}</strong>
                     <em>{{list.limit}}</em>
@@ -82,7 +83,7 @@ export default {
             return recommandList;
         },
     },
-    created(){
+    mounted(){
         this.$store.dispatch('FETCH_BENEFITS');
     }
 }

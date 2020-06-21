@@ -57,7 +57,7 @@
       }],
       xAxes: [ {
         ticks:{
-          fontSize:10,
+          fontSize:12,
           fontColor: '#fff',
           padding:10,
         },

@@ -25,8 +25,8 @@ const options = {
     legend: { /*상단 라벨*/
       position: 'right',
       labels: {
-					fontColor: "#7b8494",
-          fontSize:10,
+					fontColor: "#eee",
+          fontSize:12,
           boxWidth:10,
 
 				}

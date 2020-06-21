@@ -154,7 +154,7 @@ export default {
         'getHistory'
       ]),
     },
-    created(){
+    mounted(){
       this.$store.dispatch('FETCH_HISTORY');
     }
 }

@@ -34,10 +34,11 @@
             <ul class="payNews">
                 <li v-for="news in getPayNews" 
                     :key="news" 
-                    :class="[news.type? 'bigArea' : '' ]">
+                    :class="[news.type? 'bigArea' : '' ]"
+                    :style="[news.type]? { backgroundImage: 'url(' + news.background + ')' } :''">
                     <p>{{news.title}}</p>
                     <span>{{news.subtitle}}</span>
-                    <img v-if="news.img!==''" :src="news.img">
+                    <img v-if="news.img" :src="news.img">
                 </li>
             </ul>
         </section>
@@ -83,7 +84,7 @@ export default {
     methods:{
 
     },
-    created(){
+    mounted(){
         this.$store.dispatch('FETCH_PAYNEWS');
         this.$store.dispatch('FETCH_ACCOUNT');
     }
