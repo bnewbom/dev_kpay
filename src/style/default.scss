@@ -6,6 +6,14 @@ fieldset legend, hr {display:none;}
 a{color: #000; text-decoration: none;}
 a:hover, a:focus, a:active {color: crimson; text-decoration: none; }
 
+/*transition*/
+.fade-enter-active, .fade-leave-active {
+transition: opacity .3s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+opacity: 0;
+}
+
 /*App*/
 #app{max-width:370px; min-width: 320px; margin:0 auto}
 h1{display: none;}
