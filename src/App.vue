@@ -1,20 +1,16 @@
 <template>
   <div id="app">
-    <navi-links></navi-links>
-    <transition name="fade">
-      <router-view></router-view>
-    </transition>
-
+    <ViewContainer></ViewContainer>
   </div>
 </template>
 
 <script>
-import NaviLinks from './components/NaviLinks' 
- 
+import ViewContainer from './views/ViewContainer' 
+
 export default {
   name: 'App',
   components: {
-    NaviLinks,
+    ViewContainer,
   }
 }
 </script>

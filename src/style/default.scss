@@ -146,6 +146,7 @@ h1{display: none;}
 .home .text-center {display:inline-block; position: absolute; right:15px; top:15px}
 .home .v-btn:not(.v-btn--round).v-size--default {height:25px; min-width: 30px; padding:5px; font-size: 11px;}
 .home .v-dialog__container{display:block;}
+.home .v-dialog__content{height:100vh}
 .home .v-sheet.v-list{padding-bottom: 0;}
 .home .v-list-item--link{height:35px}
 .home .v-list-item{min-height: 0; border-bottom: 1px solid #eee;}
