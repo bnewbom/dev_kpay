@@ -6,13 +6,12 @@
             <article>
                 <h2>Pay</h2>
                 <router-link to="/pay_history" target="_blank" class="deposit">{{getAccount[0].balance}}원</router-link>
-                <a class="charge" v-on:click="toggleCharge">충전</a>
+                <BottomSheet></BottomSheet>
                 <div class="menu">
                     <a class="upgrade">
                         <span>업그레이드</span>
                         계좌로 연 0.6% 혜택받기
                     </a>
-                    <em v-on:click="toggleMenu">메뉴</em>
                 </div>
             </article>
             <ul>
@@ -58,15 +57,14 @@
 </template>
 
 <script>
-import SelectDeposit from '../components/SelectDeposit' 
-import DetailMenu from '../components/DetailMenu' 
+import BottomSheet from '../components/BottomSheet' 
+
 import { mapGetters } from 'vuex';
 
 export default {
     name: 'HomeView',
     components: {
-        SelectDeposit,
-        DetailMenu,
+        BottomSheet,
     },
     computed:{
         ...mapGetters([
@@ -83,12 +81,7 @@ export default {
         }
     },
     methods:{
-        toggleMenu: function(){
-            this.showMenu = true;
-        },
-        toggleCharge: function(){
-            this.showChargeList = true;
-        }
+
     },
     created(){
         this.$store.dispatch('FETCH_PAYNEWS');
