@@ -98,12 +98,13 @@ export default {
 </script>
 
 <style>
-    .rolling_box{height:25px;}
-    .rolling_box ul { width: 100%; height: 100%; overflow: hidden; position: relative;}
-    .rolling_box ul li {width: 100%; height: 100%; transition: .5s; position:absolute; transition: top .75s; top: 100%; z-index: 1; background: #eee;}
+    .rolling_box{height:30px; width:100%; position:absolute; top:0; right:0; left:0; z-index:5}
+    .rolling_box ul { width: 100%; height: 100%; overflow: hidden; position: relative; border-radius:5px; border: 1px solid #b8b8b8; text-indent:10px}
+    .rolling_box ul li {width: 100%; height: 100%; color:#5e5c5c; line-height: 30px; transition: .5s; position:absolute; transition: top .75s; top: 100%; z-index: 1; background: #eee;}
     .card_sliding{top: 0 !important; z-index: 100 !important;} 
     .card_sliding_after{top: -100% !important; z-index: 10 !important;}
     .rolling_box ul li p {font-size:14px;}
     .before_slide {transform: translateY(100%);}
     .after_slide {transform: translateY(0);}
+    .rolling_box:after{content: ""; display: block; clear: both;}
 </style>

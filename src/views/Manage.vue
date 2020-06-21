@@ -6,7 +6,7 @@
       <!--Summary-->
       <header>
         <h2>나의 순자산</h2>
-        <p>계좌 속 숨겨진 돈을 찾아드려요</p> 
+        <p>4,443,302원</p> 
       </header>
 
       <!--최근 이용내역-->
@@ -14,10 +14,10 @@
         <h2>최근 이용내역</h2>
         <ul>
           <li v-for="list in getHistory" :key="list">
-            <span>{{list.bank}}</span>
+            <img :src="list.img">
             <sapn>{{list.title}}</sapn>
-            <span>{{list.date}}</span>
-            <strong>{{list.price}}원 
+            <span class="date">{{list.date}}</span>
+            <strong :style="list.type ? { color: '#033fad' }: ''" >{{list.price}}원 
               <em v-if="list.type">수입</em>
               <em v-else>지출</em>
             </strong>

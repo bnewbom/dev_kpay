@@ -49,16 +49,19 @@ h1{display: none;}
 .home footer{margin-bottom:20px; font-size:8px; text-align: center; color:#2c2e2c}
 
 /*ManageView*/
-.manage{padding:10px; background:#eee;}
+.manage{position:relative; padding:10px; background:#eee;}
 .manage .notice {height:20px; margin-bottom:10px; font-size:13px; overflow: hidden;}
 .manage h2{font-size:15px}
-.manage header{height:50px; margin:0 -10px 10px; padding:15px 25px; background: #fff;}
-.manage header h2{font-size:13px; font-weight: normal; color:#2c2e2c}
+.manage header{position:relative; margin:20px -10px 10px; padding-left:15px; background: #fff;}
+.manage header h2{padding: 15px 0 5px; font-size:12px; font-weight: normal; color:#2c2e2c}
+.manage header p{padding-bottom:10px; font-weight:bold;}
 .manage section{margin-bottom:10px; padding:15px; border-radius: 5px; background: #fff;}
-.manage .recent h2{margin-bottom: 5px; font-size:13px; font-weight: normal;}
-.manage .recent li{position:relative; margin-bottom:10px;font-size:12px}
+.manage .recent h2{margin-bottom:15px; font-size:13px; font-weight: normal;}
+.manage .recent li{position:relative; margin-bottom:15px;font-size:12px}
 .manage .recent li:last-child{margin-bottom: 0;}
+.manage .recent li img{width:30px; height:30px; margin-right:10px; float:left; object-fit: cover; border-radius:10px; border:1px solid #dbdbdb}
 .manage .recent span{display: block;}
+.manage .recent .date{color:#6e6e6e; font-size:11px}
 .manage .recent strong{position: absolute; top:0; right:0;}
 .manage .recent em{font-style: normal; font-size:8px; font-weight: normal; color:#6b6b6b;}
 .manage .cardReport{background: #eee; padding:0}
