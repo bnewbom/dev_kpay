@@ -19,6 +19,9 @@
             bottom: 0
         }
     },
+    animation: {
+      duration:4000,
+    },
     tooltips:{ 
       yAlign: 'bottom',
       displayColors: false,

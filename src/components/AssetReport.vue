@@ -18,6 +18,9 @@ const options = {
             bottom: 10
         }
     },
+    animation: {
+      duration:4000,
+    },
     tooltips:{ 
       yAlign: 'bottom',
       displayColors: false,
