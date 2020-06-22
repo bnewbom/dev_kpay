@@ -19,5 +19,7 @@ function fetchHistory(){
 function fetchAccount(){
     return axios.get(`${config.baseUrl}accounts`);
 }
-
-export { fetchPayNews, fetchBenefits, fetchHistory, fetchAccount }
+function fetchCardList(){
+    return axios.get(`${config.baseUrl}card-lists`);
+}
+export { fetchPayNews, fetchBenefits, fetchHistory, fetchAccount, fetchCardList }

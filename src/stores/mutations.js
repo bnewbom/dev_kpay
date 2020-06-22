@@ -10,5 +10,8 @@ export default {
     },
     SET_ACCOUNT(state, account){
         state.account = account;
-    }
+    },
+    SET_CARDLIST(state, cardlist){
+        state.cardlist = cardlist;
+    },
 }

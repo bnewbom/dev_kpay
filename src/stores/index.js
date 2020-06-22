@@ -13,6 +13,7 @@ export default new Vuex.Store({
         payNews:[],
         benefits:[],
         history:[],
+        cardlist:[],
     },
     getters,
     mutations,

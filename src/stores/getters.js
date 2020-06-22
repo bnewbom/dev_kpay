@@ -10,5 +10,8 @@ export default{
     },
     getAccount(state){
         return state.account;
+    },
+    getCardlist(state){
+        return state.cardlist;
     }
 }

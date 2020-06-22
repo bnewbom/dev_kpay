@@ -3,7 +3,7 @@
     <div>
         <swiper class="swipeIcon" :options="swiperOption" ref="mySwiper" @someSwiperEvent="callback">
             <!-- slides -->
-            <swiper-slide v-for="list in cardList" :key="list">
+            <swiper-slide v-for="list in getCardlist" :key="list">
                 <!-- <img :src="list.img"> -->
                 <em>{{list.title}}</em>
                 <em>{{list.content}}</em>
@@ -13,27 +13,11 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 export default {
     name: 'SwiperBenefit',
     data() {
         return {
-            cardList:[
-                {
-                    title:'송금 절친',
-                    content:'김모모',
-                    icoUrl:'',
-                },
-                {
-                    title:'수익날씨',
-                    content:'흐림',
-                    icoUrl:'',
-                },
-                {
-                    title:'주로 썼어요',
-                    content:'0원 쓰기',
-                    icoUrl:'',
-                }
-            ],
             swiperOption: {
                 slidesPerView:1,
                 spaceBetween: 10,
@@ -50,12 +34,14 @@ export default {
         }
     },
     computed: {
+        ...mapGetters(['getCardlist']),
         swiper() {
             return this.$refs.mySwiper.swiper
             }
     },
     mounted() {
         this.swiper.slideTo(3, 1000, false)
+        this.$store.dispatch('FETCH_CARDLIST');
     }
 }
 </script>

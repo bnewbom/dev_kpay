@@ -3,6 +3,7 @@ import {
     fetchBenefits,
     fetchHistory,
     fetchAccount, 
+    fetchCardList,
 } from '../api/index.js';
 
 export default {
@@ -17,5 +18,8 @@ export default {
     },
     FETCH_ACCOUNT({ commit }){
         return fetchAccount().then(response => commit('SET_ACCOUNT', response.data));
+    },
+    FETCH_CARDLIST({ commit }){
+        return fetchCardList().then(response => commit('SET_CARDLIST', response.data));
     }
 }
