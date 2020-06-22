@@ -17,7 +17,7 @@
         <!--메인 혜택 리스트-->
         <section class="main">
             <h2>메인 혜택 리스트</h2>
-            <swiper-list></swiper-list>
+            <swiper-benefit></swiper-benefit>
             <ul>
                 <li v-for="list in mainBenefitList" :key="list">
                     <span>{{list.title}}</span>
@@ -48,11 +48,11 @@
 
 <script>
 import { mapGetters } from 'vuex'
-import SwiperList from '../components/SwiperList' 
+import SwiperBenefit from '../components/SwiperBenefit' 
 export default {
     name: 'BenefitView',
     components:{
-        SwiperList,
+        SwiperBenefit,
     },
     data: function(){
         return{

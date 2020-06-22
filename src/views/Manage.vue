@@ -8,14 +8,13 @@
         <h2>나의 순자산</h2>
         <p>4,443,302원</p> 
       </header>
-
       <!--최근 이용내역-->
       <section class="recent">
         <h2>최근 이용내역</h2>
         <ul>
           <li v-for="list in getHistory" :key="list">
             <img :src="list.img">
-            <sapn>{{list.title}}</sapn>
+            <span>{{list.title}}</span>
             <span class="date">{{list.date}}</span>
             <strong :style="list.type ? { color: '#033fad' }: ''" >{{list.price}}원 
               <em v-if="list.type">수입</em>
@@ -33,10 +32,9 @@
             <span>이제부터 신한카드 결제금액은 여기서 챙겨드려요</span> 
             <a>확인하기</a>
           </li>
-          <li class="swipe" v-for="card in cardList" :key="card">
+          <li class="swipe">
             <span>PFM 리포트</span>
-            <em>{{card.title}}</em>
-            <em>{{card.content}}</em>
+            <swiper-pfm></swiper-pfm>
           </li>
         </ul>
       </section>
@@ -102,6 +100,7 @@ import { mapGetters } from 'vuex'
 import RollingText from '../components/RollingText'
 import SpendReport from '../components/SpendReport'
 import AssetReport from '../components/AssetReport'
+import SwiperPfm from '../components/SwiperPfm' 
 
 export default {
     name: 'ManageView',
@@ -109,27 +108,11 @@ export default {
       RollingText,
       SpendReport,
       AssetReport,
+      SwiperPfm
     },
     data: function(){
       return{
-        
-        cardList:[
-          {
-            title:'송금 절친',
-            content:'김모모',
-            icoUrl:'',
-          },
-          {
-            title:'수익날씨',
-            content:'흐림',
-            icoUrl:'',
-          },
-          {
-            title:'주로 썼어요',
-            content:'0원 쓰기',
-            icoUrl:'',
-          }
-        ]
+
       }
     },
     computed:{

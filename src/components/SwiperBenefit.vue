@@ -15,7 +15,7 @@
 import { mapGetters } from 'vuex'
 
 export default {
-    name: 'SwiperList',
+    name: 'SwiperBenefit',
     data() {
         return {
             swiperOption: {
