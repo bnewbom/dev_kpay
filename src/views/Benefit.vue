@@ -35,13 +35,24 @@
             </p>
             
             <ul>
-                <li v-for="list in recommandList" :key="list">
+                <li v-for="list in recommandList" :key="list" @click="showDetail(list)">
                     <img v-if="list.img" :src="list.img">
                     <span>{{list.title}}</span>
                     <strong>{{list.subtitle}}</strong>
                     <em>{{list.limit}}</em>
                 </li>
             </ul>
+
+            <ModalComponent class="benefit_popup" v-if="this.showModal" @close="showModal=false">
+                <template v-slot:header>
+                    <h3>{{clickedList.title}}</h3>
+                </template>
+                <template v-slot:body>
+                    <p>{{clickedList.subtitle}}</p>
+                    <span>{{clickedList.limit}}</span>
+                </template>
+            </ModalComponent>
+
         </section>
     </div>
 </template>
@@ -49,14 +60,23 @@
 <script>
 import { mapGetters } from 'vuex'
 import SwiperBenefit from '../components/SwiperBenefit' 
+import ModalComponent from '../components/ModalComponent' 
+
 export default {
     name: 'BenefitView',
     components:{
         SwiperBenefit,
+        ModalComponent,
     },
     data: function(){
         return{
             thisMonth: '6',
+            showModal: false,
+            clickedList:{
+                title:'',
+                subtitle:'',
+                limit:''
+            }
         }
     },
     computed:{
@@ -82,6 +102,16 @@ export default {
             return recommandList;
         },
     },
+    methods:{
+        showDetail(list){
+            this.showModal = true;
+            this.clickedList.title = list.title;
+            this.clickedList.subtitle = list.subtitle;
+            this.clickedList.limit = list.limit;
+
+            console.log(list);
+        }
+    },
     mounted(){
         this.$store.dispatch('FETCH_BENEFITS');
     }
@@ -89,5 +119,6 @@ export default {
 </script>
 
 <style>
-
+.benefit_popup{left:auto}
+.benefit_popup span{font-size:13px; color:#525252}
 </style>
