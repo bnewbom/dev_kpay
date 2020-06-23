@@ -4,7 +4,7 @@
         <swiper class="swipeIcon" :options="swiperOption" ref="mySwiper" @someSwiperEvent="callback">
             <!-- slides -->
             <swiper-slide v-for="list in getCardlist" :key="list">
-                <!-- <img :src="list.img"> -->
+                <img :src="list.img">
                 <em>{{list.title}}</em>
                 <em>{{list.content}}</em>
             </swiper-slide>
@@ -41,9 +41,9 @@ export default {
     },
     mounted() {
         this.swiper.slideTo(3, 1000, false)
-        this.$store.dispatch('FETCH_CARDLIST');
     }
 }
 </script>
 <style scoped>
+.swipeIcon img{display:block; margin:0 auto; width:50px; object-fit: cover;}
 </style>

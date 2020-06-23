@@ -122,6 +122,7 @@ export default {
     },
     mounted(){
       this.$store.dispatch('FETCH_HISTORY');
+      this.$store.dispatch('FETCH_CARDLIST');
     }
 }
 </script>
